@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .organic-edge {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .watercolor-blob {
+            background: radial-gradient(circle at center, var(--tw-gradient-from) 0%, transparent 70%);
+            filter: blur(40px);
+            opacity: 0.15;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffddb4",
+                        "on-primary-fixed": "#321200",
+                        "on-primary-fixed-variant": "#763400",
+                        "surface-container-low": "#fff1eb",
+                        "surface-container": "#fdeae1",
+                        "primary-container": "#e07b39",
+                        "secondary-container": "#feae2c",
+                        "on-primary-container": "#4f2100",
+                        "on-surface": "#231a15",
+                        "surface-variant": "#f1dfd6",
+                        "outline-variant": "#dcc1b4",
+                        "tertiary-fixed-dim": "#ffb694",
+                        "primary-fixed-dim": "#ffb68c",
+                        "primary": "#9a4601",
+                        "tertiary": "#8d4e2e",
+                        "on-surface-variant": "#554339",
+                        "surface-tint": "#9a4601",
+                        "inverse-primary": "#ffb68c",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#6b4500",
+                        "secondary": "#835500",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "tertiary-container": "#ce835f",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#351000",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#501f04",
+                        "secondary-fixed-dim": "#ffb955",
+                        "surface-bright": "#fff8f6",
+                        "primary-fixed": "#ffdbc9",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#633f00",
+                        "surface": "#fff8f6",
+                        "background": "#fff8f6",
+                        "on-secondary-fixed": "#291800",
+                        "on-background": "#231a15",
+                        "surface-container-highest": "#f1dfd6",
+                        "inverse-on-surface": "#ffede5",
+                        "error-container": "#ffdad6",
+                        "outline": "#897367",
+                        "on-tertiary-fixed-variant": "#703719",
+                        "surface-dim": "#e8d6ce",
+                        "surface-container-high": "#f7e4dc",
+                        "inverse-surface": "#392e29"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "2rem",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin": "32px",
+                        "stack-lg": "4rem",
+                        "container-max": "1280px",
+                        "stack-sm": "1rem"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "accent-italic": ["Newsreader"],
+                        "h2": ["Newsreader"],
+                        "h3": ["Newsreader"],
+                        "h1": ["Newsreader"],
+                        "label": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["1.25rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "accent-italic": ["1.5rem", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "h2": ["3rem", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "h3": ["2.25rem", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "h1": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "label": ["0.875rem", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-background fixed top-0 left-0 right-0 z-50">
+<nav class="flex justify-between items-center w-full px-margin py-stack-sm max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<img 
+    alt="Stoka Logo" 
+    id="site-logo" 
+    class="h-28 w-28 object-contain"
+    src="Photos/start.png"
+    onerror="this.onerror=null;this.src='start.png';"
+/>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label text-label text-primary border-b-2 border-primary pb-1" href="index.html">Home</a>
+<a class="font-label text-label text-on-surface-variant hover:text-primary transition-colors" href="our-story.html">Our Story</a>
+<a class="font-label text-label text-on-surface-variant hover:text-primary transition-colors" href="the-work.html">The Work</a>
+<a class="font-label text-label text-on-surface-variant hover:text-primary transition-colors" href="why-it-matters.html">Why It Matters</a>
+<a class="font-label text-label text-on-surface-variant hover:text-primary transition-colors" href="our-vision.html">Our Vision</a>
+<a class="font-label text-label text-on-surface-variant hover:text-primary transition-colors" href="get-involved.html">Get Involved</a>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[85vh] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A large group of smiling children and staff standing in a doorway, representing the Stoka community in Pune." src="https://lh3.googleusercontent.com/aida/ADBb0ugEweYd4qX-M8UgNGeExRCxkD6WeD48BiuR8X0dwnP4TXAZPNeqzPp2uXVjf02_6yvq3FFDSxsIxnbalSdgH5ledknhSyUvY4cdqzinUswr2kQpPAZC9kKV19-jjzNeRpwMoKsH4raGwgWA3TDK3QwhEhAYWWGO4rXoyze3uUd6bwHvr-C0p8N77i3E5IflaWRhBjeBzHB_IlEKRFIpXSCpiBP7WmCOZ_ybMWVc03PDPdYImiIQqlPm_33fJb0AOEbcsGUkpoC7dw"/>
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<div class="relative z-10 text-center px-margin max-w-4xl mx-auto space-y-6">
+<h1 class="font-h1 text-h1 text-white leading-tight">Every child carries a spark. We help them find it.</h1>
+<p class="font-body-lg text-body-lg text-white/90 max-w-2xl mx-auto">
+                    Stoka brings dance and the arts to children with disabilities from low-income communities in Pune.
+                </p>
+<div class="pt-8">
+<a id="watch-story-btn" class="inline-flex items-center justify-center bg-primary text-white font-label px-8 py-4 rounded-full text-lg hover:scale-95 active:scale-90 transition-transform shadow-lg shadow-primary/20" href="#video">
+                        Watch our story
+                    </a>
+</div>
+</div>
+</section>
+<!-- Numbers Strip -->
+<section class="bg-surface-container py-12 relative overflow-hidden">
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-primary-container watercolor-blob"></div>
+<div class="max-w-container-max mx-auto px-margin relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+<div class="space-y-2">
+<span class="block font-h2 text-primary text-h2">50+</span>
+<span class="block font-label text-on-surface-variant uppercase tracking-widest">Students Reached</span>
+</div>
+<div class="space-y-2">
+<span class="block font-h2 text-primary text-h2">Ages 5 to 20</span>
+<span class="block font-label text-on-surface-variant uppercase tracking-widest">Inclusive Learning</span>
+</div>
+<div class="space-y-2">
+<span class="block font-h2 text-primary text-h2">Since 2019</span>
+<span class="block font-label text-on-surface-variant uppercase tracking-widest">In Pune, India</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Video Section -->
+<section class="py-stack-lg bg-background" id="video">
+<div class="max-w-4xl mx-auto px-margin">
+<div class="aspect-video w-full rounded-2xl overflow-hidden shadow-2xl relative group bg-surface-container-highest">
+    <div id="video-placeholder" class="w-full h-full relative cursor-pointer" data-video-id="ZZhjtP7gnu0" aria-label="Play Stoka Story video">
+        <img id="video-thumb" src="https://img.youtube.com/vi/ZZhjtP7gnu0/hqdefault.jpg" alt="Stoka Story video thumbnail" class="w-full h-full object-cover block"/>
+        <button id="video-play-btn" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full w-20 h-20 flex items-center justify-center shadow-lg hover:scale-105 transition-transform" aria-hidden="true">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7-11-7z" fill="#fff"></path></svg>
+        </button>
+    </div>
+</div>
+<div class="mt-12 text-center space-y-4">
+<blockquote class="font-accent-italic text-accent-italic text-tertiary max-w-2xl mx-auto leading-relaxed italic">
+                        "I hope that, through Stoka, my students find their own way to express themselves."
+                    </blockquote>
+<div class="space-y-1">
+<cite class="font-label text-on-surface not-italic block">— Surbhi, Founder</cite>
+<p class="font-label text-on-surface-variant text-xs opacity-60">Photography and film by Isha Thorat</p>
+</div>
+</div>
+</div>
+</section>
+<!-- What is Stoka -->
+<section class="py-stack-lg bg-surface-container-low relative">
+<div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary-container watercolor-blob"></div>
+<div class="max-w-container-max mx-auto px-margin">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="organic-edge bg-primary/10 absolute inset-0 -rotate-3 scale-105"></div>
+<img class="relative z-10 w-full rounded-3xl object-cover h-[500px]" data-alt="A close-up, heartwarming portrait of a dance teacher holding the hands of a young student with a cognitive disability in Pune. Both are smiling radiantly as they practice a simple dance movement. The lighting is soft and natural, coming from a nearby window, highlighting the texture of their skin and the warmth of their connection. The setting is intimate and caring, using a warm color palette of terracottas and ambers." src="https://lh3.googleusercontent.com/aida/ADBb0ujIaJJ-5XyPu8WwSKa1Gsfqmi1VwpeqD_8YUb4gjvXOVyDy-9CWkY6RndMMeounjByFncHB3KP-_J1uOdaKfJ5xlBitg7hGjLIPMFkmoU85S4HLU-9kcht5eG46fIoPOXahJ9eU1rQIifwMr6u_oHYdFhe1RyG5_YUIJUuBVP3j7metzATcD5uWCBdT64CQ2CFEyWdsTOZN9x-s9CznG1xyRX8etOPfQnWp5bTEsPAglkdidp66QBLaBvR5MA5QB1ywQIyCEjmvjV4"/>
+</div>
+<div class="space-y-6">
+<h2 class="font-h2 text-h2 text-primary">What is Stoka?</h2>
+<div class="space-y-4 text-on-surface-variant">
+<p class="font-body-lg text-body-lg">
+                                Derived from the Sanskrit word for 'spark', Stoka is a social initiative born from the belief that movement is a universal language.
+                            </p>
+<p class="font-body-md text-body-md">
+                                We teach dance and expressive arts to children and young adults with cognitive disabilities, particularly those from low-income communities. Our sessions are not just about steps; they are about rhythm, autonomy, and the pure joy of taking up space.
+                            </p>
+<div class="pt-4 flex items-center gap-4 text-primary">
+    <div class="relative">
+        <button id="heart-btn" class="heart-button" aria-pressed="false" title="Like" aria-label="Like">
+            <svg class="heart-icon" viewBox="0 0 24 24" width="36" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#6b7280" stroke-width="0.8" fill="currentColor"></path>
+            </svg>
+            <div class="heart-splash" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+    </div>
+    <span class="font-label">Built on radical inclusion and warmth.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Photo Strip -->
+<section class="py-stack-md bg-background">
+<div class="flex overflow-x-auto no-scrollbar gap-6 px-margin py-8 snap-x">
+<div class="flex-none w-72 h-96 snap-center">
+<img class="w-full h-full object-cover rounded-xl shadow-md hover:rotate-2 transition-transform" data-alt="A candid, medium shot of a child laughing while trying a dance pose in a community center in Pune. The light is bright and airy, emphasizing the joy and movement. The child's arms are outstretched, creating a sense of openness and play. The visual style is tactile and organic, reflecting a handmade, human feel." src="https://lh3.googleusercontent.com/aida/ADBb0uhNQchaKNZ4YCt5CNl6CdftJy9YOf2G3HaIku0fqho_wIrzIjD9ufsC5EiFSLmGsykPiaucPy6XZY2Ml9fFrHyrxcckyxZOj43tq10UZbuvNAIk6bZyN5HBfmRjRCKib-ctpTYGpwe0gCWmsRv5lMyXjidGnOXtIsmIBym2k4FmvMD0-MbePhWVvFHDEnJflVzhjkktrfZYB4a19E5xQOhHTY_2QYm-wdVGNcABUyIEeC72nJW0U-dsC0khlN9qTDsvYRJOUbXnkg"/>
+</div>
+<div class="flex-none w-72 h-96 snap-center">
+<img class="w-full h-full object-cover rounded-xl shadow-md -rotate-1 hover:rotate-0 transition-transform" data-alt="A group of children in a circle, holding colorful ribbons that move through the air like watercolor strokes. The setting is a warm, sunlit studio with light wood floors. The mood is rhythmic and collective, celebrating the community aspect of the Stoka dance program in Pune." src="https://lh3.googleusercontent.com/aida/ADBb0ujC7PRoCQEzDlF2CdXavGde-tZtFqaanOJjIVcodlc36WyxwDt4kE-BzGqdv6Z3gjmMGc0xOv9fEMk1JfiM8lnwZ0aOBNuKZw2wg6KJ0ADpAE2WqYV4RJSWFsgt2z_pPP_l-hQ1TK7fv2FOLuIjI559ljtZ_rE9oifW47LHyoY2DADitePDsFPyGr563ITRVz4S2XrTtdyBvkStO6wZ86BxvlS_6NImsX7xjMpZQzt09BIL3bh3buR7zXxco7BugE8zMsnM-aks73Y"/>
+</div>
+<div class="flex-none w-72 h-96 snap-center">
+<img class="w-full h-full object-cover rounded-xl shadow-md rotate-2 hover:rotate-0 transition-transform" data-alt="Close-up of hands painting with vibrant orange and amber colors during an arts workshop. The hands are covered in paint, showcasing the tactile and messy joy of creation. The focus is soft, highlighting the textures of the paper and the fluidity of the colors." src="https://lh3.googleusercontent.com/aida/ADBb0ugKVxpOSoKqDF3btMjadmXQk_-6VQgKPcJ0k1Ck5Oybe214KjuQ8tN63Lq1d8Vfu8E9UAbven0QJ2qA4scGUjx4efIgYNLrUMGPrbAku8GJPyMMTIOFThREq9ZHe0QHwJF_nOMXfveTbGYkh7Hzm31Vq5B4aRJxWVMwRv0p5ZFGztZAVpWnY9Bp_z-oYXEQeqlUKyNK7rSPzlsADVoaeTvH25nSY5BaZA9uixxaZnfOMUTNPYt3rjJmhiaeR2XZXe1MWZqy9ZnPh8g"/>
+</div>
+<div class="flex-none w-72 h-96 snap-center">
+<img class="w-full h-full object-cover rounded-xl shadow-md -rotate-2 hover:rotate-0 transition-transform" data-alt="A joyful teacher and student high-fiving after a successful dance sequence. The student's face is beaming with pride. The background is a soft-focus dance studio with warm neutral walls, creating a safe and encouraging environment." src="https://lh3.googleusercontent.com/aida/ADBb0ugX74Q0MtX3j72ZjC2zSqFQUIn-G4kiuSBSxLSWOrf_j1HJuXFye6hJDl4byCw4ppMQdjaHxvdizRLK3LIn1HNtddOotZgkHn8oMAsBz36cM7AxAgOPLo2MbnhOyAOdg5Kxu-4cPsNQP_ZLguijZhG3a-bt9ChdZpiOohKeSD8lltu3ha70WWYtP2hIbD-vyF7B6XFdjHvlVnxnlgMd3d4jqWJGe97DVUeK7-QkcTA_hLJqiXUHBSea9gk270BzklQXDM84Kp4tOcQ"/>
+</div>
+<div class="flex-none w-72 h-96 snap-center">
+<img class="w-full h-full object-cover rounded-xl shadow-md rotate-1 hover:rotate-0 transition-transform" data-alt="A wider shot of the dance class in Pune, showing children moving freely across the floor. The composition is dynamic, capturing the rhythmic flow of the class. The lighting is soft and inclusive, avoiding harsh shadows to maintain a gentle, welcoming atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQNbWa17S63VxKKG9-GX4brqtDpbosCz-qFofkqxwaM1hq0KEnobYhjxK0WmlonBEH0UditIs67i_eJxDzExJ3L4J_JEki1xTu3lCKof5aa7kar9mBQ1PWsS4Ou6DPUOvkM9FeUilCey7l1H6FuZ3wjKTuS5XmC4RFYx4sWhZ4hR68lCrEoMUdPTVriIj6ew8Wnp6We9fHV6fVqW-2WooCtiRloEQ_GfIIv1IIDLFYr8EmcxI5Gq7AqgiF6uiyUoFJRPqbHbWpFONb"/>
+</div>
+</div>
+</section>
+<!-- Closing CTA -->
+<section class="bg-primary-container py-stack-lg relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_50%,_#ffffff_0%,_transparent_50%)]"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin text-center relative z-10 space-y-8">
+<div class="space-y-4">
+<h2 class="font-h1 text-h2 text-on-primary-container">Stoka is coming back to Pune in 2026.</h2>
+<p class="font-body-lg text-on-primary-container opacity-90 max-w-2xl mx-auto">
+                        Looking for volunteers, school partners, and helpers to help us reignite the spark.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button id="volunteer-btn" class="bg-on-primary-container text-white px-8 py-4 rounded-full font-label w-full sm:w-auto hover:opacity-90 transition-opacity">
+                        Volunteer with us
+                    </button>
+<button id="contact-btn" class="open-contact border-2 border-on-primary-container text-on-primary-container px-8 py-4 rounded-full font-label w-full sm:w-auto hover:bg-on-primary-container/10 transition-colors">
+                        Get in touch
+                    </button>
+</div>
+</div>
+</section>
+</main>
+
+<div id="contact-modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center z-60">
+    <div class="bg-surface-container rounded-xl p-6 w-80 shadow-xl text-on-surface">
+        <div class="flex justify-between items-start mb-4">
+            <h3 class="font-h3 text-lg text-primary">Get in touch</h3>
+            <button id="contact-close" class="text-on-surface-variant material-symbols-outlined">close</button>
+        </div>
+        <div class="space-y-3">
+            <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">language</span><div>stokathemovement.org</div></div>
+            <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">email</span><div>admin@stokathemovement.org</div></div>
+            <div class="flex items-center gap-3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z" stroke="#9a4601" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 11.37a4 4 0 1 1-7.99-.37A4 4 0 0 1 16 11.37z" stroke="#9a4601" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 6.5h.01" stroke="#9a4601" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><div><a class="underline text-on-surface-variant" href="https://www.instagram.com/stokathemovement">@stokathemovement</a></div></div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-surface-container dark:bg-surface-container-highest mt-stack-lg rounded-t-xl">
+<div class="max-w-container-max mx-auto px-margin py-stack-md">
+
+<div class="flex flex-col md:flex-row justify-between items-center md:items-center gap-8">
+
+    <!-- LEFT SIDE -->
+    <div class="flex items-center gap-6">
+
+        <img 
+            alt="Stoka Logo" 
+            class="h-32 w-32 object-contain"
+            src="Photos/start.png"
+            onerror="this.onerror=null;this.src='start.png';"
+        />
+
+        <div class="flex flex-col gap-2">
+
+            <p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                Photography &amp; Film by Isha Thorat. © Stoka
+            </p>
+
+            <p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                Domain created and available: stokathemovement.org
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="flex gap-8">
+
+        <a 
+            class="font-label text-label text-on-surface-variant hover:text-secondary transition-colors underline" 
+            href="mailto:admin@stokathemovement.org"
+        >
+            admin@stokathemovement.org
+        </a>
+
+        <a 
+            class="font-label text-label text-on-surface-variant hover:text-secondary transition-colors underline" 
+            href="https://www.instagram.com/stokathemovement?igsh=MXRlZWt6dG45eG5lbA=="
+        >
+            @stokathemovement
+        </a>
+
+    </div>
+
+</div>
+</div>
+</footer>
+
+<style>
+    #heart-btn{transition:transform .18s ease,color .18s ease}
+    /* New heart styles */
+    .heart-button{background:transparent;border:0;padding:0;display:inline-flex;align-items:center;justify-content:center;position:relative;cursor:pointer}
+    .heart-icon{transition:transform .18s ease, fill .18s ease, color .18s ease; color:transparent}
+    .heart-button.filled .heart-icon{color:#ef4444;transform:scale(1.08)}
+    .heart-button.filled .heart-icon path{stroke:#ef4444}
+    .heart-button.jerk{animation:heart-jerk .28s cubic-bezier(.2,.8,.2,1)}
+    @keyframes heart-jerk{0%{transform:translateY(0) scale(1)}30%{transform:translateY(-6px) scale(1.12)}100%{transform:translateY(0) scale(1)}}
+    .heart-splash{position:absolute;inset:0;pointer-events:none}
+    .heart-splash span{position:absolute;left:50%;top:50%;width:8px;height:8px;border-radius:9999px;background:#ef4444;transform:translate(-50%,-50%) scale(0);opacity:0}
+    .heart-splash.animate span:nth-child(1){animation:splash 480ms cubic-bezier(.2,.8,.2,1) 0ms forwards}
+    .heart-splash.animate span:nth-child(2){animation:splash 480ms cubic-bezier(.2,.8,.2,1) 80ms forwards}
+    .heart-splash.animate span:nth-child(3){animation:splash 480ms cubic-bezier(.2,.8,.2,1) 160ms forwards}
+    @keyframes splash{0%{transform:translate(-50%,-50%) scale(0);opacity:0.9}50%{opacity:0.6}100%{transform:translate(-50%,-50%) scale(6);opacity:0}}
+    #contact-modal .material-symbols-outlined{cursor:pointer}
+    /* Ensure contact modal overlays all page content */
+    #contact-modal{z-index:99999}
+</style>
+
+<script>
+// Smooth scroll and attempt to play embedded YouTube when Watch our story is clicked
+document.getElementById('watch-story-btn')?.addEventListener('click', function(e){
+    e.preventDefault();
+    const videoSection = document.getElementById('video');
+    const placeholder = document.getElementById('video-placeholder');
+    if(videoSection){
+        videoSection.scrollIntoView({behavior:'smooth', block:'center'});
+        // open the video in a new tab after scrolling to match expected UX
+        setTimeout(() => {
+            if(placeholder){
+                placeholder.click();
+            }
+        }, 700);
+    }
+});
+
+// Video placeholder click — open YouTube in new tab (avoids embed configuration errors)
+document.getElementById('video-placeholder')?.addEventListener('click', function(){
+    const id = this.getAttribute('data-video-id');
+    const url = 'https://www.youtube.com/watch?v=' + id;
+    window.open(url, '_blank', 'noopener');
+});
+
+// Heart toggle animation with splash and jerk
+const heartBtn = document.getElementById('heart-btn');
+if(heartBtn){
+    const splash = heartBtn.querySelector('.heart-splash');
+    let animating = false;
+    heartBtn.addEventListener('click', function(){
+        if(animating) return; // prevent spam
+        animating = true;
+        const pressed = this.getAttribute('aria-pressed') === 'true';
+        this.setAttribute('aria-pressed', String(!pressed));
+        // toggle filled visual
+        this.classList.toggle('filled', !pressed);
+        // small jerk animation
+        this.classList.add('jerk');
+        setTimeout(()=> this.classList.remove('jerk'), 300);
+        // splash animation
+        if(splash){
+            splash.classList.remove('animate');
+            // force reflow to restart animation
+            // eslint-disable-next-line no-unused-expressions
+            void splash.offsetWidth;
+            splash.classList.add('animate');
+            setTimeout(()=>{
+                splash.classList.remove('animate');
+            }, 700);
+        }
+        // unlock after animations
+        setTimeout(()=>{ animating = false; }, 500);
+    });
+}
+
+// Volunteer button navigates to Get Involved page
+document.getElementById('volunteer-btn')?.addEventListener('click', function(){
+    window.location.href = 'get-involved.html';
+});
+
+// Contact modal (support multiple triggers with .open-contact)
+const contactModal = document.getElementById('contact-modal');
+const contactClose = document.getElementById('contact-close');
+document.querySelectorAll('.open-contact').forEach(btn => {
+    btn.addEventListener('click', function(e){
+        e.preventDefault();
+        if(contactModal) contactModal.classList.remove('hidden');
+        contactModal?.classList.add('flex');
+    });
+});
+contactClose?.addEventListener('click', function(){
+    if(contactModal) contactModal.classList.add('hidden');
+    contactModal?.classList.remove('flex');
+});
+contactModal?.addEventListener('click', function(e){
+    if(e.target === contactModal){
+        contactModal.classList.add('hidden');
+        contactModal.classList.remove('flex');
+    }
+});
+</script>
+</body></html>

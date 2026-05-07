@@ -1,0 +1,322 @@
+<!-- Our Vision - Stoka -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Vision - Stoka</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .watercolor-blob {
+            background: radial-gradient(circle at center, var(--tw-gradient-from) 0%, transparent 70%);
+            filter: blur(40px);
+            opacity: 0.15;
+            z-index: -1;
+        }
+        .organic-border {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffddb4",
+                        "on-primary-fixed": "#321200",
+                        "on-primary-fixed-variant": "#763400",
+                        "surface-container-low": "#fff1eb",
+                        "surface-container": "#fdeae1",
+                        "primary-container": "#e07b39",
+                        "secondary-container": "#feae2c",
+                        "on-primary-container": "#4f2100",
+                        "on-surface": "#231a15",
+                        "surface-variant": "#f1dfd6",
+                        "outline-variant": "#dcc1b4",
+                        "tertiary-fixed-dim": "#ffb694",
+                        "primary-fixed-dim": "#ffb68c",
+                        "primary": "#9a4601",
+                        "tertiary": "#8d4e2e",
+                        "on-surface-variant": "#554339",
+                        "surface-tint": "#9a4601",
+                        "inverse-primary": "#ffb68c",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#6b4500",
+                        "secondary": "#835500",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffdbcc",
+                        "tertiary-container": "#ce835f",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#351000",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#501f04",
+                        "secondary-fixed-dim": "#ffb955",
+                        "surface-bright": "#fff8f6",
+                        "primary-fixed": "#ffdbc9",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#633f00",
+                        "surface": "#fff8f6",
+                        "background": "#fff8f6",
+                        "on-secondary-fixed": "#291800",
+                        "on-background": "#231a15",
+                        "surface-container-highest": "#f1dfd6",
+                        "inverse-on-surface": "#ffede5",
+                        "error-container": "#ffdad6",
+                        "outline": "#897367",
+                        "on-tertiary-fixed-variant": "#703719",
+                        "surface-dim": "#e8d6ce",
+                        "surface-container-high": "#f7e4dc",
+                        "inverse-surface": "#392e29"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "2rem",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin": "32px",
+                        "stack-lg": "4rem",
+                        "container-max": "1280px",
+                        "stack-sm": "1rem"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "accent-italic": ["Newsreader"],
+                        "h2": ["Newsreader"],
+                        "h3": ["Newsreader"],
+                        "h1": ["Newsreader"],
+                        "label": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["1.25rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "accent-italic": ["1.5rem", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "h2": ["3rem", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "h3": ["2.25rem", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "h1": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "label": ["0.875rem", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<nav class="bg-background dark:bg-background docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin py-stack-sm max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<img 
+    alt="Stoka Logo" 
+    id="site-logo" 
+    class="h-28 w-28 object-contain"
+    src="Photos/start.png"
+    onerror="this.onerror=null;this.src='start.png';"
+/>
+</div>
+<div class="hidden md:flex gap-gutter">
+<a class="font-label text-label text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="index.html">Home</a>
+<a class="font-label text-label text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="our-story.html">Our Story</a>
+<a class="font-label text-label text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="the-work.html">The Work</a>
+<a class="font-label text-label text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="why-it-matters.html">Why It Matters</a>
+<a class="font-label text-label text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="our-vision.html">Our Vision</a>
+<a class="font-label text-label text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="get-involved.html">Get Involved</a>
+</div>
+<button class="md:hidden p-2 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</div>
+</nav>
+<main class="relative">
+<!-- Decoration blobs -->
+<div class="absolute top-0 right-0 w-96 h-96 from-primary-container watercolor-blob"></div>
+<div class="absolute top-[20%] left-0 w-80 h-80 from-secondary-container watercolor-blob"></div>
+<!-- Hero / Where we are today -->
+<section class="max-w-container-max mx-auto px-margin py-stack-lg flex flex-col md:flex-row items-center gap-stack-lg">
+<div class="md:w-1/2 space-y-6">
+<span class="font-label text-label text-secondary uppercase tracking-widest">Our Present Journey</span>
+<h1 class="font-h1 text-h1 text-primary">Where We Are Today</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    We are currently in a season of intentional stillness—a period of deep reflection, rebuilding, and nurturing our roots. As we prepare for a grand relaunch in 2026, we are weaving together new partnerships and refining our movement to better serve every child who dreams of expressing themselves.
+                </p>
+<div class="pt-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label text-label hover:bg-on-primary-fixed transition-colors shadow-sm">
+                        Follow the Journey
+                    </button>
+</div>
+</div>
+<div class="md:w-1/2 relative">
+<div class="aspect-square bg-surface-container-high organic-border overflow-hidden rotate-3">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uggqwizBuX-Si49Rfaw5uKa4_lgXgLRfpYaKMKv5wrjHFwPvge-NV5XYVGW07xda8fYGLh8De9y3y1wtn_V4YM17PTa86BFbXUQjpmp5QiGjL9iQfojbK4LMo-3erbWwwXLMMqjh78RTCuGkr456BiAk3BZCHbg4BNczZKwxw_s0cyVfpD_cjE6uyRXfrMeVDDWZSXUZCKNHSAZZM5hao_N0bkzZisl3BtanJuOwnICETLl9UmSLcSLdhlvXoFK4wxHMYcDI-4Da0E"/>
+</div>
+<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-secondary-fixed organic-border -z-10 opacity-50"></div>
+</div>
+</section>
+<!-- The Bigger Vision -->
+<section class="bg-surface-container-low py-stack-lg overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin">
+<div class="text-center mb-stack-lg max-w-3xl mx-auto">
+<h2 class="font-h2 text-h2 text-tertiary mb-6">Dance is where we started. But every child finds their spark differently.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Our vision expands beyond movement into a sanctuary of multi-sensory artistic discovery.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+<!-- Card 1 -->
+<div class="bg-background p-8 rounded-xl border border-outline-variant hover:border-primary transition-all duration-300 group flex flex-col justify-between h-80">
+<span class="material-symbols-outlined text-4xl text-primary mb-4" data-icon="settings_accessibility">settings_accessibility</span>
+<div>
+<h3 class="font-h3 text-h3 text-primary text-[1.5rem] mb-2">Dance and movement</h3>
+<p class="font-label text-label text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">The rhythm of the body in space.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-background p-8 rounded-xl border border-outline-variant hover:border-secondary transition-all duration-300 group flex flex-col justify-between h-80 mt-8 md:mt-12">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4" data-icon="music_note">music_note</span>
+<div>
+<h3 class="font-h3 text-h3 text-secondary text-[1.5rem] mb-2">Music</h3>
+<p class="font-label text-label text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">Melodies that resonate from within.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-background p-8 rounded-xl border border-outline-variant hover:border-tertiary transition-all duration-300 group flex flex-col justify-between h-80">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-4" data-icon="palette">palette</span>
+<div>
+<h3 class="font-h3 text-h3 text-tertiary text-[1.5rem] mb-2">Visual arts</h3>
+<p class="font-label text-label text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">Brushes and colors painting stories.</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-background p-8 rounded-xl border border-outline-variant hover:border-primary-container transition-all duration-300 group flex flex-col justify-between h-80 mt-8 md:mt-12">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-4" data-icon="theater_comedy">theater_comedy</span>
+<div>
+<h3 class="font-h3 text-h3 text-primary-container text-[1.5rem] mb-2">Drama and theatre</h3>
+<p class="font-label text-label text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">Stepping into new worlds on stage.</p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-background p-8 rounded-xl border border-outline-variant hover:border-secondary-container transition-all duration-300 group flex flex-col justify-between h-80">
+<span class="material-symbols-outlined text-4xl text-secondary-container mb-4" data-icon="edit_note">edit_note</span>
+<div>
+<h3 class="font-h3 text-h3 text-secondary-container text-[1.5rem] mb-2">Creative writing</h3>
+<p class="font-label text-label text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">Words that give wings to thought.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- What comes next: Timeline -->
+<section class="max-w-container-max mx-auto px-margin py-stack-lg">
+<h2 class="font-h2 text-h2 text-primary text-center mb-stack-lg">What comes next</h2>
+<div class="relative">
+<!-- Line -->
+<div class="absolute top-1/2 left-0 w-full h-1 bg-outline-variant rounded-full -translate-y-1/2 hidden md:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg relative">
+<!-- Phase 1 -->
+<div class="flex flex-col items-center md:items-start space-y-6">
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center font-h3 text-h3 z-10">1</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-surface-container-highest">
+<h4 class="font-label text-label text-primary mb-2">Now -- 2026</h4>
+<h3 class="font-h3 text-h3 text-[1.75rem] mb-4">Relaunch</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Rebuilding our community hub, training new facilitators, and solidifying the 2026 relaunch framework.</p>
+</div>
+</div>
+<!-- Phase 2 -->
+<div class="flex flex-col items-center md:items-start space-y-6">
+<div class="w-16 h-16 bg-secondary text-on-secondary rounded-full flex items-center justify-center font-h3 text-h3 z-10">2</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-surface-container-highest">
+<h4 class="font-label text-label text-secondary mb-2">Next</h4>
+<h3 class="font-h3 text-h3 text-[1.75rem] mb-4">Expansion</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Opening local satellite workshops and integrating music and visual arts into our core curriculum.</p>
+</div>
+</div>
+<!-- Phase 3 -->
+<div class="flex flex-col items-center md:items-start space-y-6">
+<div class="w-16 h-16 bg-tertiary text-on-tertiary rounded-full flex items-center justify-center font-h3 text-h3 z-10">3</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-surface-container-highest">
+<h4 class="font-label text-label text-tertiary mb-2">Future</h4>
+<h3 class="font-h3 text-h3 text-[1.75rem] mb-4">The Stoka Centre</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Establishing a permanent sanctuary where all forms of art coexist for holistic child development.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA / Vision Quote -->
+<section class="max-w-container-max mx-auto px-margin py-stack-lg text-center">
+<div class="bg-primary-container text-on-primary-container organic-border p-12 md:p-24 relative overflow-hidden">
+<div class="relative z-10">
+<p class="font-accent-italic text-accent-italic italic text-h2 mb-8 text-on-primary-container opacity-90">"Movement is the song of the soul, and every soul has a unique song."</p>
+<a href="get-involved.html" class="inline-block bg-on-primary-container text-primary-container px-10 py-5 rounded-full font-label text-label hover:opacity-90 transition-opacity">
+                        Join Our Vision
+                    </a>
+</div>
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-secondary-container rounded-full opacity-20 blur-3xl"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-highest mt-stack-lg rounded-t-xl">
+<div class="max-w-container-max mx-auto px-margin py-stack-md">
+
+<div class="flex flex-col md:flex-row justify-between items-center md:items-center gap-8">
+
+    <!-- LEFT SIDE -->
+    <div class="flex items-center gap-6">
+
+        <img 
+            alt="Stoka Logo" 
+            class="h-32 w-32 object-contain"
+            src="Photos/start.png"
+            onerror="this.onerror=null;this.src='start.png';"
+        />
+
+        <div class="flex flex-col gap-2">
+
+            <p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                Photography &amp; Film by Isha Thorat. © Stoka
+            </p>
+
+            <p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                Domain created and available: stokathemovement.org
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="flex gap-8">
+
+        <a 
+            class="font-label text-label text-on-surface-variant hover:text-secondary transition-colors underline" 
+            href="mailto:admin@stokathemovement.org"
+        >
+            admin@stokathemovement.org
+        </a>
+
+        <a 
+            class="font-label text-label text-on-surface-variant hover:text-secondary transition-colors underline" 
+            href="https://www.instagram.com/stokathemovement?igsh=MXRlZWt6dG45eG5lbA=="
+        >
+            @stokathemovement
+        </a>
+
+    </div>
+
+</div>
+</div>
+</footer>
+</body></html>

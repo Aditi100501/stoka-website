@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Work - Stoka</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#ffddb4",
+                    "on-primary-fixed": "#321200",
+                    "on-primary-fixed-variant": "#763400",
+                    "surface-container-low": "#fff1eb",
+                    "surface-container": "#fdeae1",
+                    "primary-container": "#e07b39",
+                    "secondary-container": "#feae2c",
+                    "on-primary-container": "#4f2100",
+                    "on-surface": "#231a15",
+                    "surface-variant": "#f1dfd6",
+                    "outline-variant": "#dcc1b4",
+                    "tertiary-fixed-dim": "#ffb694",
+                    "primary-fixed-dim": "#ffb68c",
+                    "primary": "#9a4601",
+                    "tertiary": "#8d4e2e",
+                    "on-surface-variant": "#554339",
+                    "surface-tint": "#9a4601",
+                    "inverse-primary": "#ffb68c",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#6b4500",
+                    "secondary": "#835500",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdbcc",
+                    "tertiary-container": "#ce835f",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#351000",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#501f04",
+                    "secondary-fixed-dim": "#ffb955",
+                    "surface-bright": "#fff8f6",
+                    "primary-fixed": "#ffdbc9",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#633f00",
+                    "surface": "#fff8f6",
+                    "background": "#fff8f6",
+                    "on-secondary-fixed": "#291800",
+                    "on-background": "#231a15",
+                    "surface-container-highest": "#f1dfd6",
+                    "inverse-on-surface": "#ffede5",
+                    "error-container": "#ffdad6",
+                    "outline": "#897367",
+                    "on-tertiary-fixed-variant": "#703719",
+                    "surface-dim": "#e8d6ce",
+                    "surface-container-high": "#f7e4dc",
+                    "inverse-surface": "#392e29"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "2rem",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin": "32px",
+                    "stack-lg": "4rem",
+                    "container-max": "1280px",
+                    "stack-sm": "1rem"
+            },
+            "fontFamily": {
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "accent-italic": ["Newsreader"],
+                    "h2": ["Newsreader"],
+                    "h3": ["Newsreader"],
+                    "h1": ["Newsreader"],
+                    "label": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-lg": ["1.25rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "accent-italic": ["1.5rem", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "h2": ["3rem", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "h3": ["2.25rem", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "h1": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label": ["0.875rem", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .watercolor-wash {
+        background: radial-gradient(circle at 10% 20%, rgba(254, 174, 44, 0.1) 0%, rgba(224, 123, 57, 0.05) 90%);
+      }
+      .organic-blob {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<header class="bg-background fixed top-0 left-0 right-0 z-50">
+<nav class="flex justify-between items-center w-full px-margin py-stack-sm max-w-container-max mx-auto">
+
+<div class="flex items-center gap-2">
+<img 
+    alt="Stoka Logo" 
+    id="site-logo" 
+    class="h-28 w-28 object-contain"
+    src="Photos/start.png"
+    onerror="this.onerror=null;this.src='start.png';"
+/>
+</div>
+
+<div class="hidden md:flex items-center space-x-8">
+
+<a 
+    class="font-label text-label text-on-surface-variant hover:text-primary transition-colors" 
+    href="index.html"
+>
+    Home
+</a>
+
+<a 
+    class="font-label text-label text-on-surface-variant hover:text-primary transition-colors" 
+    href="our-story.html"
+>
+    Our Story
+</a>
+
+<a 
+    class="font-label text-label text-primary border-b-2 border-primary pb-1" 
+    href="the-work.html"
+>
+    The Work
+</a>
+
+<a 
+    class="font-label text-label text-on-surface-variant hover:text-primary transition-colors" 
+    href="why-it-matters.html"
+>
+    Why It Matters
+</a>
+
+<a 
+    class="font-label text-label text-on-surface-variant hover:text-primary transition-colors" 
+    href="our-vision.html"
+>
+    Our Vision
+</a>
+
+<a 
+    class="font-label text-label text-on-surface-variant hover:text-primary transition-colors" 
+    href="get-involved.html"
+>
+    Get Involved
+</a>
+
+</div>
+
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+
+</nav>
+</header>
+<main class="pt-32"><!-- Hero Section -->
+<section class="relative px-margin py-stack-lg max-w-container-max mx-auto watercolor-wash overflow-visible">
+<div class="grid lg:grid-cols-2 gap-gutter items-center">
+<div class="space-y-stack-sm">
+<h1 class="font-h1 text-h1 text-primary leading-tight">Weekly dance classes.<br/>Real joy.<br/>Real development.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+              Our curriculum is a thoughtfully adapted framework rooted in Dance Movement Therapy (DMT). We don't just teach steps; we foster a rhythmic dialogue between the body and the mind, creating a safe space for growth, expression, and radical inclusion.
+            </p>
+<div class="pt-8">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label text-label hover:opacity-90 scale-95 active:scale-90 transition-transform">Explore Our Sessions</button>
+</div>
+</div>
+<div class="relative flex justify-center items-center">
+<div class="organic-blob bg-secondary-container w-full aspect-square max-w-md opacity-20 absolute -z-10"></div>
+<img alt="Dance class portrait" class="w-full h-auto rounded-3xl object-cover shadow-sm border border-outline-variant" data-alt="A warm, candid photograph by Isha Thorat showing a diverse group of children laughing and dancing together in a brightly lit studio. The lighting is soft and golden, filtering through large windows. The overall aesthetic is organic and joyful, featuring a palette of warm oranges and earthy creams. The shot captures a genuine moment of physical expression and connection." src="https://lh3.googleusercontent.com/aida/ADBb0uhFSLJeQMxobUqembp_M1B0i4Qu_fAKcCOMfW5tlwNH07WJd4djz5bY9FV7B7a_9cz7-GS-qB4G37_L7e3HVmv3n47kRzFiugXwHihcf0D160yh6yNiBzHIFr6-5YZj_ghite3SHWjJcjVktP5leEUOkMgMTfsaYcSPC3JJiybuXIQzp7955rRxU8YC9ysTVcr-MN9xmS_toi7pOc-JZQaUo2tPiLaUhfWmUpj4Yzrs0ToizQAZCYV9Se4WCL-wd0n57fkRhtqHKyU"/>
+</div>
+</div>
+</section>
+<!-- Who We Serve -->
+<section class="px-margin py-stack-lg max-w-container-max mx-auto">
+<div class="text-center mb-stack-md">
+<h2 class="font-h2 text-h2 text-tertiary">Who we serve</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-lowest p-margin rounded-xl border border-outline-variant flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-primary-fixed rounded-full flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-4xl" data-icon="diversity_1">diversity_1</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4 text-primary">Neurodiversity</h3>
+<p class="text-on-surface-variant font-body-md">Dedicated programs for children with cognitive disabilities, focusing on individual sensory needs and unique ways of being.</p>
+</div>
+<div class="bg-surface-container-lowest p-margin rounded-xl border border-outline-variant flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-secondary-fixed rounded-full flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined text-4xl" data-icon="child_care">child_care</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4 text-secondary">Ages 5 to 18</h3>
+<p class="text-on-surface-variant font-body-md">Developmentally-tailored curriculum that grows with the child, from early motor exploration to teenage self-expression.</p>
+</div>
+<div class="bg-surface-container-lowest p-margin rounded-xl border border-outline-variant flex flex-col items-center text-center">
+<div class="w-16 h-16 bg-tertiary-fixed rounded-full flex items-center justify-center mb-6 text-tertiary">
+<span class="material-symbols-outlined text-4xl" data-icon="communities">communities</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4 text-tertiary">Pune Communities</h3>
+<p class="text-on-surface-variant font-body-md">Prioritizing access for children from low-income backgrounds, ensuring dance belongs to everyone, regardless of circumstance.</p>
+</div>
+</div>
+</section>
+<!-- How our program works -->
+<section class="bg-surface-container-low py-stack-lg overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin">
+<div class="max-w-3xl mb-stack-md">
+<h2 class="font-h2 text-h2 text-primary mb-4">How our program works</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Our sessions are more than just classes; they are choreographed journeys of discovery. Every session follows a rhythmic arc designed to safely transition students from their daily world into a state of creative flow.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-gutter relative">
+<!-- Connector line for desktop -->
+<div class="hidden lg:block absolute top-12 left-0 w-full h-[2px] bg-outline-variant -z-10"></div>
+<div class="space-y-6 group">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl relative">1</div>
+<div class="bg-background p-6 rounded-xl border border-outline-variant min-h-[280px] flex flex-col justify-between">
+<div>
+<h4 class="font-h3 text-h3 text-primary mb-2">Warm-up</h4>
+<p class="font-body-md text-on-surface-variant">Gentle sensory engagement to ground the body and build awareness of the space and breath.</p>
+</div>
+<img alt="Warm-up session" class="w-full h-24 object-cover rounded-lg mt-4 border border-outline-variant" data-alt="A close-up shot of hands reaching together in a circle, captured with a soft-focus lens. The lighting is warm and ethereal, highlighting the natural skin tones and the soft fabric of comfortable dance wear. The composition emphasizes unity and connection, set against an earthy, textured studio floor in a light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC1lfkqav0F6DI4JlCqlPC0D61bmYRiP8D5Z7mcEtgDmFQQzcpK2T0IMsjbUyFfuOFLY6U8LO_yoq1W3SICCrOOTUGLHrIZ6vGC1UipPxHxJhCikS17LA4uJKQ9yH9CgZwjBbIQwaiOgFU3wFyl0bqh3vPNS9tI6XNc6ZU_ojBx41dfPWXC9kXlomgmG-4w0TkH73LwkV1UxTxJhTmb3oP9pGw_pisu-_Bf76g0qHF9cgryA93wWIwl2zgTwqjJj63LMhPafhjcXdM"/>
+</div>
+</div>
+<div class="space-y-6 group">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl relative">2</div>
+<div class="bg-background p-6 rounded-xl border border-outline-variant min-h-[280px] flex flex-col justify-between">
+<div>
+<h4 class="font-h3 text-h3 text-primary mb-2">Guided dance</h4>
+<p class="font-body-md text-on-surface-variant">Structured rhythmic movements that build coordination, balance, and motor memory.</p>
+</div>
+<img alt="Guided dance session" class="w-full h-24 object-cover rounded-lg mt-4 border border-outline-variant" data-alt="A wide-angle shot of a dance facilitator leading a group of children through a rhythmic sequence. The room is filled with soft, diffused sunlight, creating a warm, inviting atmosphere. The children are following along with focused yet joyful expressions. The style is Monoline and tactile, reflecting the organic flow of the movement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYuvj-A-6ycjnJ8aDKN-7o4NpPpE0wkyq-XrnOivdPqMTEog-gmEns_VGBi5Q5Ca0YTA2gXhsIGjGcvxBF0L4YGTxWfnHfVtnn_13ZFL73FCInvnncILG0ngqn6DE-w5Gn9QdnJy-REcL-kflXRWx307uqRmWQp_5oXEdWpvZC8OBIy6Mg9LOdcXmGsE1YMVx3QQ1sYCQF3nLrJOeTyY_Jjr0JgPDGkHpA_rE_Or9sxxnpqyVxqtjdfxA45IfM7jyrLka64qYdFzyL"/>
+</div>
+</div>
+<div class="space-y-6 group">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl relative">3</div>
+<div class="bg-background p-6 rounded-xl border border-outline-variant min-h-[280px] flex flex-col justify-between">
+<div>
+<h4 class="font-h3 text-h3 text-primary mb-2">Free expression</h4>
+<p class="font-body-md text-on-surface-variant">Unstructured time for students to find their own movement language and creative voice.</p>
+</div>
+<img alt="Free expression session" class="w-full h-24 object-cover rounded-lg mt-4 border border-outline-variant" data-alt="An artistic, motion-blurred photograph capturing the dynamic movement of a student spinning in a sunlit studio. The palette is rich with oranges and ambers, conveying a sense of energy and freedom. The background is a simple, textured wall that adds to the handmade, tactile feel of the brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARqpTKkIJ305JgxwCqUfkl-EmJKVpyIULB0IATt5G20yG4470lpkoZD3zu_Vw9SaRDCotACX0tDihHKM1N9Bq-vnctt9iooX7EvHERzyyP5DhBOuuJzHTpvx7XOZXMi_FBUlbDxQTOe9HbTUv-osSl4WJ-j6divjD1cFRzYraNop8Ypwl-XA0hwBAZtsBEXnqRtr1kGUZV4acpthP5cf_QgqCYebcT4AqQ456l2sQTsV_Qa82X7nxuDT_WDyZQYoiZi5uFYjVCDZ54"/>
+</div>
+</div>
+<div class="space-y-6 group">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-xl relative">4</div>
+<div class="bg-background p-6 rounded-xl border border-outline-variant min-h-[280px] flex flex-col justify-between">
+<div>
+<h4 class="font-h3 text-h3 text-primary mb-2">Cool-down</h4>
+<p class="font-body-md text-on-surface-variant">Closing reflections and calming movements to integrate the session's learnings.</p>
+</div>
+<img alt="Cool-down session" class="w-full h-24 object-cover rounded-lg mt-4 border border-outline-variant" data-alt="A peaceful photograph showing a group of students sitting in a circle on colorful cushions, with their heads bowed in a moment of quiet reflection. The lighting is low and warm, creating a serene, meditative mood. The composition is balanced and calm, reflecting the grounded, earthly aspect of the brand's sunshine and earth palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaOnzn2iSAgMORaT8wG_RY0fiRQ8rqNIgu18ffVCJX5dTqT_cYk1sdu_x-abc4aWV4jncbJfbNewu5KK227R-EQAyN_e8OvePn5eeGofNvT7Y5OkxILwuuVwDh9j1NzjkjVS2thkF6QV5UQaizLyBPpXEEFgJdA5Ragb-fpz4EBG0yQ9MOYWTCBXYwn0w35S2xatYL8Cu33c_62T1eAHkQ3k5rrf-zWttZ0YPYLE-IGjp5FCLHhr7xdSHG_-9r-Nn8I4QKEt8Sq5vE"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- What it achieves -->
+<section class="px-margin py-stack-lg max-w-container-max mx-auto">
+<div class="text-center mb-stack-md">
+<h2 class="font-h2 text-h2 text-tertiary">What it achieves</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto mt-4">Beyond the dance floor, our students build life-long skills that translate into their everyday worlds.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="flex gap-4 p-6 hover:bg-surface-container transition-colors rounded-xl border border-transparent hover:border-outline-variant">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="fitness_center">fitness_center</span>
+<div>
+<h4 class="font-label text-label text-primary uppercase mb-2">Motor skills</h4>
+<p class="text-body-md text-on-surface-variant">Improving coordination, balance, and gross motor control through rhythmic repetition.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 hover:bg-surface-container transition-colors rounded-xl border border-transparent hover:border-outline-variant">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="sentiment_satisfied">sentiment_satisfied</span>
+<div>
+<h4 class="font-label text-label text-primary uppercase mb-2">Emotional expression</h4>
+<p class="text-body-md text-on-surface-variant">Providing a non-verbal outlet for complex feelings and internal experiences.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 hover:bg-surface-container transition-colors rounded-xl border border-transparent hover:border-outline-variant">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="groups">groups</span>
+<div>
+<h4 class="font-label text-label text-primary uppercase mb-2">Social connection</h4>
+<p class="text-body-md text-on-surface-variant">Building empathy and community through shared movement and group synchronization.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 hover:bg-surface-container transition-colors rounded-xl border border-transparent hover:border-outline-variant">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="auto_awesome">auto_awesome</span>
+<div>
+<h4 class="font-label text-label text-primary uppercase mb-2">Confidence</h4>
+<p class="text-body-md text-on-surface-variant">Developing a sense of agency and pride in their physical capabilities and creative output.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 hover:bg-surface-container transition-colors rounded-xl border border-transparent hover:border-outline-variant">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="celebration">celebration</span>
+<div>
+<h4 class="font-label text-label text-primary uppercase mb-2">Joy</h4>
+<p class="text-body-md text-on-surface-variant">Prioritizing the radical happiness that comes from free, uninhibited physical expression.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 hover:bg-surface-container transition-colors rounded-xl border border-transparent hover:border-outline-variant">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="psychology">psychology</span>
+<div>
+<h4 class="font-label text-label text-primary uppercase mb-2">Cognitive engagement</h4>
+<p class="text-body-md text-on-surface-variant">Stimulating neural pathways through rhythmic pattern-matching and sequence learning.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our founding school -->
+<section class="px-margin py-stack-lg max-w-container-max mx-auto">
+<div class="bg-tertiary-container text-on-tertiary-container p-margin rounded-3xl flex flex-col md:flex-row gap-gutter items-center">
+<div class="flex-1 space-y-4">
+<span class="font-label text-label opacity-80">Our Roots</span>
+<h2 class="font-h2 text-h2">Our founding school</h2>
+<p class="font-body-lg text-body-lg">
+              We extend our deepest gratitude to <span class="font-bold">Eshanya Special School</span> in Yerwada, Pune. As our founding partner, they provided the home where Stoka first took flight. Their belief in the power of dance for children with special needs made this movement possible.
+            </p>
+<div class="flex items-center gap-2 pt-4">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<span class="font-label text-label" data-location="Yerwada, Pune">Yerwada, Pune, India</span>
+</div>
+</div>
+<div class="w-full md:w-1/3">
+<div class="aspect-square bg-surface-container-highest/20 rounded-2xl flex items-center justify-center border-2 border-dashed border-on-tertiary-container/30 relative overflow-hidden">
+<img alt="School Building" class="w-full h-full object-cover" data-alt="A heartwarming, sun-drenched exterior of a community special school in Pune. The building is painted in warm, cheerful colors and surrounded by lush green tropical plants. The lighting is bright and high-key, creating a hopeful, modern light-mode look. The aesthetic is clean and welcoming, reflecting a safe haven for education and dance." src="https://lh3.googleusercontent.com/aida/ADBb0ujtwpnQsPR43FtJ7GtWZ2MHLyB3pgYd8zL8WEjnXCgMzitr-sfyGMJye_Gvz63VIYWrZbB8WfYk69Oyqx-qRbHTFADzNcWN3UoXJEIUErXo6mMdcCuSqc0oeZExG3vktiPKyHRVoRyi6VL9KE0uUkAd5FIJO1jdV4X18gUXmKqUrzZACaHni07hw3jq-yVfHXx8LxVugzKQfqP82l5eb9rr40lF1p9V5IkkOJNxkXTzILZp5EbgaaBlgkRR5776an3ZUmeHCR74JbA"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="px-margin py-stack-lg max-w-container-max mx-auto bg-background">
+<div class="grid md:grid-cols-2 gap-gutter">
+<div class="p-stack-md bg-surface-container-low rounded-2xl relative">
+<span class="material-symbols-outlined text-secondary text-5xl absolute top-6 right-6 opacity-20" data-icon="format_quote">format_quote</span>
+<p class="font-accent-italic text-accent-italic text-on-surface mb-8 italic leading-relaxed">
+              "Seeing our students find rhythm and expression they never knew they had is magical. Stoka hasn't just brought dance; it's brought a new language of joy to our corridors."
+            </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed"></div>
+<div>
+<p class="font-label text-label text-primary">Sangita Wadodkar</p>
+<p class="text-body-md text-on-surface-variant text-sm">Principal, Eshanya Special School</p>
+</div>
+</div>
+</div>
+<div class="p-stack-md bg-surface-container-low rounded-2xl relative">
+<span class="material-symbols-outlined text-secondary text-5xl absolute top-6 right-6 opacity-20" data-icon="format_quote">format_quote</span>
+<p class="font-accent-italic text-accent-italic text-on-surface mb-8 italic leading-relaxed">
+              "As a parent, you look for spaces where your child is seen, not just taught. Stoka is that space. My son returns from every class with a sense of calm and a huge smile."
+            </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed"></div>
+<div>
+<p class="font-label text-label text-primary">Mr. Vijay Ghorpade</p>
+<p class="text-body-md text-on-surface-variant text-sm">Parent</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container dark:bg-surface-container-highest mt-stack-lg rounded-t-xl">
+<div class="max-w-container-max mx-auto px-margin py-stack-md">
+
+<div class="flex flex-col md:flex-row justify-between items-center md:items-center gap-8">
+
+    <!-- LEFT SIDE -->
+    <div class="flex items-center gap-6">
+
+        <img 
+            alt="Stoka Logo" 
+            class="h-32 w-32 object-contain"
+            src="Photos/start.png"
+            onerror="this.onerror=null;this.src='start.png';"
+        />
+
+        <div class="flex flex-col gap-2">
+
+            <p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                Photography &amp; Film by Isha Thorat. © Stoka
+            </p>
+
+            <p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                Domain created and available: stokathemovement.org
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="flex gap-8">
+
+        <a 
+            class="font-label text-label text-on-surface-variant hover:text-secondary transition-colors underline" 
+            href="mailto:admin@stokathemovement.org"
+        >
+            admin@stokathemovement.org
+        </a>
+
+        <a 
+            class="font-label text-label text-on-surface-variant hover:text-secondary transition-colors underline" 
+            href="https://www.instagram.com/stokathemovement?igsh=MXRlZWt6dG45eG5lbA=="
+        >
+            @stokathemovement
+        </a>
+
+    </div>
+
+</div>
+</div>
+</footer>
+</body></html>

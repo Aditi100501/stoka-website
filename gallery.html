@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#ffddb4",
+                    "on-primary-fixed": "#321200",
+                    "on-primary-fixed-variant": "#763400",
+                    "surface-container-low": "#fff1eb",
+                    "surface-container": "#fdeae1",
+                    "primary-container": "#e07b39",
+                    "secondary-container": "#feae2c",
+                    "on-primary-container": "#4f2100",
+                    "on-surface": "#231a15",
+                    "surface-variant": "#f1dfd6",
+                    "outline-variant": "#dcc1b4",
+                    "tertiary-fixed-dim": "#ffb694",
+                    "primary-fixed-dim": "#ffb68c",
+                    "primary": "#9a4601",
+                    "tertiary": "#8d4e2e",
+                    "on-surface-variant": "#554339",
+                    "surface-tint": "#9a4601",
+                    "inverse-primary": "#ffb68c",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#6b4500",
+                    "secondary": "#835500",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdbcc",
+                    "tertiary-container": "#ce835f",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#351000",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#501f04",
+                    "secondary-fixed-dim": "#ffb955",
+                    "surface-bright": "#fff8f6",
+                    "primary-fixed": "#ffdbc9",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#633f00",
+                    "surface": "#fff8f6",
+                    "background": "#fff8f6",
+                    "on-secondary-fixed": "#291800",
+                    "on-background": "#231a15",
+                    "surface-container-highest": "#f1dfd6",
+                    "inverse-on-surface": "#ffede5",
+                    "error-container": "#ffdad6",
+                    "outline": "#897367",
+                    "on-tertiary-fixed-variant": "#703719",
+                    "surface-dim": "#e8d6ce",
+                    "surface-container-high": "#f7e4dc",
+                    "inverse-surface": "#392e29"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "2rem",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin": "32px",
+                    "stack-lg": "4rem",
+                    "container-max": "1280px",
+                    "stack-sm": "1rem"
+            },
+            "fontFamily": {
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "accent-italic": ["Newsreader"],
+                    "h2": ["Newsreader"],
+                    "h3": ["Newsreader"],
+                    "h1": ["Newsreader"],
+                    "label": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-lg": ["1.25rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "accent-italic": ["1.5rem", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "h2": ["3rem", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "h3": ["2.25rem", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "h1": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "label": ["0.875rem", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .organic-shape-1 {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .organic-shape-2 {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+        .masonry-column {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .water-texture {
+            background-image: radial-gradient(circle at 2px 2px, rgba(154, 70, 1, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background water-texture min-h-screen selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopAppBar -->
+<header class="bg-background dark:bg-background docked full-width top-0 z-50">
+<div class="flex items-center gap-2">
+<img 
+    alt="Stoka Logo" 
+    id="site-logo" 
+    class="h-28 w-28 object-contain"
+    src="Photos/start.png"
+    onerror="this.onerror=null;this.src='start.png';"
+/>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label text-label text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="index.html">Home</a>
+<a class="font-label text-label text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="our-story.html">Our Story</a>
+<a class="font-label text-label text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="the-work.html">The Work</a>
+<a class="font-label text-label text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="why-it-matters.html">Why It Matters</a>
+<a class="font-label text-label text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="our-vision.html">Our Vision</a>
+<a class="font-label text-label text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="get-involved.html">Get Involved</a>
+</nav>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin pt-stack-lg pb-stack-lg">
+<!-- Hero Intro Section -->
+<section class="mb-stack-lg text-center max-w-3xl mx-auto">
+<h1 class="font-h2 text-h2 text-primary mb-stack-sm leading-tight">The Rhythm of Growth</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic">
+                "Everything you see here happened in one year, in one school, with one class every week."
+            </p>
+<div class="w-24 h-1 bg-secondary-container mx-auto mt-stack-md rounded-full"></div>
+</section>
+<!-- Video Section -->
+<section class="mb-stack-lg">
+<div class="bg-surface-container rounded-xl p-stack-md overflow-hidden relative">
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary-container opacity-10 organic-shape-1"></div>
+<div class="absolute -bottom-8 -left-8 w-32 h-32 bg-secondary-container opacity-20 organic-shape-2"></div>
+<h2 class="font-h3 text-h3 text-tertiary mb-stack-md relative z-10">Watch Stoka in action.</h2>
+<div class="aspect-video w-full rounded-lg overflow-hidden shadow-sm relative z-10">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="w-full h-full" frameborder="0" src="https://www.youtube.com/embed/ZZhjtP7gnu0" title="YouTube video player"></iframe>
+</div>
+</div>
+</section>
+<!-- Photo Masonry Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Column 1 -->
+<div class="masonry-column"><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uht2DutScenY9RXP2aqyRTKIBa1wtwucnZFiGCNiy24HR4rvssarZiKCjGxArOB2WjMSdS5my2F_JEAETlryfoHak-yHzVdvCrKlEZxCwlZwDFxv7Ya6_GP2W-1PVurDAfmaL9VbenQYvPumHduXKfW7PX6u-Qjk1Hk5i8hucdBsDgbjaMhkJG_tG-pR4J6TPnl2csMaWmTEkFcgq96Gwq2gZSt3Ql-NiV0RqKmD0ZiKyJyiZmrf18ECJQhPr5f_mzdOYWITqXrTmE"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ugm5fFmnfAhv9xkXCSKx_U8g3J7JCSUXziZhFGAb9IRWib40vPA52FUm_yA1xZKvVjOBjsT-tszll7Qf-Ge5VkjbwkLHRP83wYAmCpSl0i1YRSStpmWBqN4Ungp7ZI7P5PF740J5TiMCBR_0aO4zhGlrqLLYMPd6PrRmoxKIquEwfK6k8DlRAQLPD4CAbljM2sIbCgBtLK-swpCr5jyqJjGju3HuHQCFpZu9uh0cnOmyvk3rjDv-0rPH-ZkZIad1igfygSLeBcJC20"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uhick0IYeRM7Fe2KWAVwNQ7gVQKFcFHVpCaNxWPiCCp4O8wnwSR9Lmd1Tbk4kmSVL7UGeYbzSXPA5ypDh8xhg0RN14TMXsHVm1z_CL08mOJFKBx_smA8rUzgETBCdVhPDuWoNOuV0rGEB1cPQKtuUOB5ehXOVMn_8d_hCj3A91sAcs7QIQygPwQedBqIulVTBr0mijv37iWXCLLC8ds52DEXdcVvfZmLKqND5sF4Qje1mBpKQxHtmKDR6pYIIizHcwlbVmuPLq35iw"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uh08lTyT_eUT0o_cYvShNYOGml5rol8zRr4R15tyCanTsuZwE81dBZiOsWsMZwQtPxT8viCLRGC28zotEmggHGHrpBBz9Rbmwdnl_9oO-JaLt5JFioTmdk3cP838QIWSTe8GOrNPf7vuQE1yj5tILqQcgMAtvTgMF1PuFmaV2gW9KsKCfRCgdSdC7wY9oHp_hf1zM8tdVA1Lo6WFIQPXM5wLmAIraIggjEEqNr1UuUuN2BU3PRi3MI8p31518yWGRNAXVlmIgjz1gQ"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ujNGmDGOlF-23ULO4QlG-wnzYrmy0OGG65k53XyYK_cfkg9WWum65pBSsZDQqmbWp5j5llMV5Wma-HHHly_ij8qC5jfR6wkOCA_cfFGR8GF5ynkU80-yacbWtba2fCyBwoApJcDH9lA_5MGB4SpKOEW3HKUbS5pDoB7f0Wj8DHCialcwMCBYFD9d_m1UR2HaYVcEE0M2AZgCMElIdkARhVHmYpTJfR7irdWqAxLU8Phln_ieo8c8UysGOwV7jWSghvc7LNeNjS3qA"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uithm2halACsaYiUsBLhYt8KohzD0tSPZRQd45KqYTMOsVG5BZs_EpBtUdl_2_z8UBmokcmub8GQGH7Ttx549p6GAbAe3VAlO3k0gfIYZsfjlKwK2DCDJfO78qLyALYhyCyDfMZyIMiViuZgV6zVHEIV9nXVgEG8HbkLpTqtPrLaUaCyStRsdfr0QN2ETfGpJg7JAWtGuC8EiNNItHYgPby-g4mBQX5nNlriuBcfaf5PhgXHNEcHBcY3UOcfoesOS5Fu-8_sgbZh0Q"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uhO1LTDwTtx-c0NAvY8i0tpV2Ob0lBQg-ILkqMdZsf2Ihv1jMOo7VNF8tf2uC2sXAtjhcbS6x3SqzHUbwFUgZTNtD7a8aKrgrL3VreJOZy604tzI943KZxfRk0bnoS5rybgWO4ZTlYdzPagifVkReS9jukY5fZfPxNcErrFGjWR-zWEb_twdPIBnFIKY3t6C2g9oTUAsKQVzC1WpcexyJX5gMDTCDllz45tXsZWKsXo7xokVQgeWx9mKva2AQAwawWo8F2Nu9CNGlg"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ui3lw7NSmJRodxUNEzWtRmXJJeXS9pQYldBlwI1qX-wg9DL4ONStxL3F_wA90-T3dYJ6H34XWIjSgS1vidEp9Lu5oqbNOiBUp8xkN6RDHcgJKX1gmtSc3xHCV3v2BLeI8oac1HdiahrEzK5Oo9poxTwvpidjh1H7uoZXqkpzlhK3zBcYZj23bwbeeqfmsyEsUEFPw1uraVTtDZ0iJjteumKMlqtLLFSfcbqeO5pF4_TqyN9qZTP04Us8Xq-rJVffMvcZl4u-OZIeQ"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uimUMjuVTdcmmvu3vczO5kDb1Di0NAagUmbIXay_L4PUeqMiEIHKtV0hAuEGXWh9eIsC3ODrC2Kcxi9mzl2BbjIrNr17JYsEqR0OY8t63In2PEjcW3PhsUw16zqXpdRAX8noWzQwMpXt5aIC1vrfOL0_5dMi1fQ939kGR6I45uGItqXfnnMQuhVHJM7uzBKFOQZpBgUT82iHoChWMai9u3YUfoimduaNQQg_qcolN457o8DD307AzlwzaRtPCexNVQJg34uI66xoQ"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uh-csDAfQlwTjnjBiImzoQ0qugZsNEKmc1lbLbRFrM8ZwlYhr_2CZkyFLoBDYPhXqLAhorf3N153ld17rwWFPb6XvtO5GIhMwFQ4z3yDBIyCe3HD44kKABh9YT_sKntQGBaUhfhoTumBxjRF8HinAZsST7yDP4OIa3v1L4VyjccqXvCbEihZghqJMlHd1neSrhgiqLquybS1jZQrsa5ZNCNPm_N77aR_rCXS-HkPQvV-5_JWJG2c7ehDn6D8_gFLxNv4nVtCJIb7W4"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uiiyCcKVUxgJSQraIWkHQ0VpnxhexYe8gMQPgemeuXAb0meAZZ8QQj95nG99CTBgR2NaYtOgS49ucPrGFUNzk9B2FNKG7z3g7ucp0OEHQ9yXDoMbt6pHgZ9eNhPqG6LSQUIJd6a8TezkZTuq1lL3RXY1GnZ57BrATSULKSoaAahrVn-8vTaQU1tb50VhV4hH8OQWPUM-5EWLN25-WP8EduqJC66lHC8czk7vuorPfYDFA_Nl_XY1a_TKpmpBiVkBr1Gcwe_VsHUzn8"/></div></div>
+<!-- Column 2 -->
+<div class="masonry-column pt-8 md:pt-0"><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ugFpv8E5HzWfJdyz2vQgaNT7wyBpHv416HwFNMi_JkuEBXaJa6zhuyJ-cLFRRDx4acwLrSpdG72otJ5GAsWJ8Pl3d1e158srBvNa4IzUE9Q1Adz7wvgQWqMV9WSSdtxb3NoMpLHSaRhNcA0HfbNRk9dbFDMo2jMOuwIrEgOYWTJLYFyuGv6Gpce8zbIGMs79ypSeVPtZgvTjNten04-8lmpQEtf6B-a_FY-GGONOzeyxfBMpL70CJYIUtb8EnzuYGLtivgbsjy-P2E"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ujy1iTH0o_thnFUfhzPKz7gHLELgYzVSrOnxbpDZwriDDolaxOuidPg9bX0bJMFUATtqNh75zK9xmO6WLkZ4m_npHNpF-ySMJyLXyE8sa8OYhcP4WMQkY9iPbwwXsfxl9w1q1Lo6txMO4g1vN634N4j4sVzTXJYx0rgBJIjAOKPIW1EdCQGU_6uvTfgoxiun03nI6kTKhmVEp2zAW6OE-Xe7V0occVOF3ajwRKZ8nHmeR3mUCYrpWrcVn7FO9k6qQnw1OZRIH0qDw"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uj-BEKZ5LdWpVZN9umk2dTWUfXk-aHs6lm4yffPGjF9kvaM21N1CEhtiXjB4ulEzQly5sG4gYhh7Hd0Esu0I_325LQqE38cc3u2llCYUU1wZlavNlFogfMsjcGFEeDrIWNPnm8Fg84-H00Kcle6-3RM0kHwjdeFKOVVVYR2BAfz9ofpKdGIk3J8nKu9ZBAHfWO70KldGMHNCX2pIbxHDst0VG-CsBVWFTcTZlHbIOKQNmKgMbtqtu-y8dxGzviaalhaCbQQwa7brI0"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uhsnMK0iKHsROSQCrvAjXPXnSbuxCIeOj20nw44IwrxQ4dxUHb0JLrDiAdkgNnIElWOusIkV96S4p3XQNVVIU7dTea7nCWfr0m9D_alDPXOHo_KE-FaDVpSWaWlYUiGEhSbFbaTZkLtVVKPBOMPt20XUm0FceC3PutCpz-pRuUVcAkDJHhfmH0PmysHjbb_YPKSWYm_y4sCBQOixH_BseV-reOAdnLbk9GYTS5mi8RQFH12yzfDbHyR13uQJv-iHP5RQ0w9VL41PEY"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uguI_ywF1GLhsBOln0stwoeYy_zmZhox3cN1ybzkKJttgbAbi8F2aikKQ5fvE4oQEYgBltkq8gI4uceINds3rOdanzPERo9k4qZ9q_Mcy9pqh_gNCGGHn7tjg9RbXbxhx2pMv6DfkuxwHdDOeGk_ukYOxbFdOXycmgL0SqaDwGBVexM0Nbjoz7hyHOAnncEvVxd1RhBjwyLYihG9gR-29Z-8Qz9eYoSsBu2SgFRf-NKftM9nyFYq-teQlea_Ii7gzvthAujWfc8Wb8"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ui8q96fheoZXx36ety-xqnSInu1QS80Qxrv4vHL4T_xGIDHgv4ES1EBFyjhC5opP4mw64S9V2pwW899YHomWmppr3nACQSGww8QWou3km_pPE3rhGUM12LlNQJRKwMjks1GSm8I-VqxzNDJFguU2jYftsUX5QrLwNyiOeTWvT-qGrff-zg-TBlhWzJ9-Ztb22MMzP1ugLZbh2otFmpK-QdL5devGxxXljuX2e6OBczgjsYyclIhBlwOAOwQWJ5kymmqf-QHmVmUeQ"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ujKkKZQBw-uWpUATHgVTI5PrQtsiEP7o5fZm8Espv_qloA0swPi4FLlHv3OcBWiR5b8Iw6SaBs7aAbQb4dNVYBjFGe_5gZC_OodSphq3DjdyJqGDLYMuIoWKgmbz0Ew09zRY1-PttL7_qb5tPm0unopl2tnJ7KUEt3-KLdU8H431qtntDWPnXAihFcgQ4FaWM57P1B6QdSA1ao8N1W2-1QEIEu3s2bSZ_PA-SF9yX1KRNh-oHqqaAD9TTdt5EXf-i9DLTlfB8fXlC0"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ugNaB-hDnHqmtOQOAwwivzmEKtkfVQWSccWzEBsLnWS5EjIbSOXyxAFOhOM5UCvz5CCKVSFqS-qysoODcddHw9xQHaeKMT5TWaJ45byWFjfKsdmyHxAlDqyA6TpJ3gGsJ4DXGWME850sIJXWCZojBFZxmejNCxGxj-K2HlZw4G1uBpUTWBp6FaK3ACCmhm8b0maNpPmW81-31OcQBnBOBrUlSLY7_Ds1WYsJT1JrdDvV1NKu6Z_tfJs7hEDkrcCC2AR8DSWu201xA"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ugrtMjNTjSzZMhKwVJbfG-qW6oCECSIDLhO2DF1j4ux1yejVpnpfobtzAINW2mdroV6QGQiV8Y1nPl5bcxfgXRyV2yZV-3RVms4J6auqI3ZZIKLCpg3wwaUnv1cuDPqCqAjJ3z-w5lxkb_Zi2S-pRtgbPkFhFCIBd67bCJomtx9LxjbWzd50VOFbCfqgPgLXJ5u9zTZNehlNHOwEF2UR2Ean3_OL-pAG2kMTLy28iDK20Ml2rzGFPqSzuJGEk-TUstMHJF1XZ8vpCs"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ugEweYd4qX-M8UgNGeExRCxkD6WeD48BiuR8X0dwnP4TXAZPNeqzPp2uXVjf02_6yvq3FFDSxsIxnbalSdgH5ledknhSyUvY4cdqzinUswr2kQpPAZC9kKV19-jjzNeRpwMoKsH4raGwgWA3TDK3QwhEhAYWWGO4rXoyze3uUd6bwHvr-C0p8N77i3E5IflaWRhBjeBzHB_IlEKRFIpXSCpiBP7WmCOZ_ybMWVc03PDPdYImiIQqlPm_33fJb0AOEbcsGUkpoC7dw"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ujQvozPPHXBmb-qbmeOAVFj7QZ-nHr1zafzOlH51XsV5ah90UbxmlAEyFp8A6bwfPvekfMgHiWb5L763oDp_D6AeyQ6fab5ZJKYUS8PSH8-iHlPE2yJ93VcNubIly9apiWCSG2qcxX2e4SAoHxj1tl6G-wLM2cdx6lGgGP7cAJ5HySiEWCmfbHmOyoBgk7hG76Q2UOQ6KIRIp0zJwYqnxbbfTfkEbE-VjEDFb7tUfu5UQNFyMtLOr5E74JhRRoe9WHQvAQRQweVIRM"/></div></div>
+<!-- Column 3 -->
+<div class="masonry-column"><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uj8udzRjBWZC1rH71f09Czlsy63GSk0UrB97xGz0_HNAQcQHXtoEo9SS0kinoSvkcZPeQ5pknbiiLREBQptqhSwNiyZaeC6_oolXkqRDLHR9KPg8qK2Ujp8Nv5JFLlj26VswQRXY8AX9jvz95T4aD9GhdvktQ-6d_nABtYO9nXgzfivoQDkB8V1LUpJntLy0dD0N40n5cdaY7SpCfp3GKHUvt5b0sxOS8OB3QqHPu-_WTwf8-NFrGyB1rjlcaq4pdQlMGjgTUmMzX8"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ujTRJQcjBBQCbY-DBLy2x8c6Vc6M4avGCEfoQw-nTbb1Wkp6GW_7ul4t3QgX5joeTFXX3q5QLpwjRBQRcqU1JVB7VVH5NqeAk7z9jAJcN9VO1lEyGro8RYlFQQEY_qDqa3nNmnsc9U1C3hX9uEj9eTbKkMlwPU-OW3q0EirxfS-bxNXZ0zOqZoKPAO9Bg3r4cxkXx0IdPLQH0sJodiu2TtcUcesvON4_x_HC74OfLcudynzw4zHQdWbW8_ADCWFs-ZSQnsrealnKA"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uhhFwlZ4SFa5X820VP_EXk-lZVtJlQmTDqv-AqPT6qorgo5bZDn2gnvWok1PI3PZMOeB6A25Mz3IEJM1XXU_9HL5_8ypUXDNVLEpJb139Aanl5bqP98NbPKylVxg588giNPaVb1RlLiaAmCZblEL4fiw9r7rQK2BNmZ03f_NSFls8pgYReFGdIiU8y1hDcx4sLr8_WtdPn0DBOckh35EAzVH2SNC41R7Ur42wIRVLDwykWmIzXl-iJ71DlNWPnCNWwT9mVdwsbOjL4"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ujNDvnKLK4s9-NnsKAqSWkjZppE0K7geKffviylEODTMOAJ6SiQXykhL7yB1njBXSfjWMBztdP5OOjc6JJdJOLJc5crOEHWkcEtaq4qbp8sieVa09x60t5xm6AOw3J-VHAHk141AMBU0wEKkZPSJSyq6D0Vx1kTxnmFq1wFWTlD4wiwDjRT9lcId3zD5xreztORpWxMLi-PIWLRJU0N5Z84f8Kh-Jhe-wrmRLreSPo3BNLf5GPao6W33aRJdbOOZlDa9_qCU_86NA"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uhHbEtgOt7DRNTwhwJddmhOJaX3DC9NunK8db1M7I5w0QumXhtWNOPFbQioZKx4NpiS91RBbRsPLZc8jXo39ilHj7X5pZesrKajJMC8n_UR8Cqw22_V78DggNbHrAvywMk-nPDZQrRcvi_MCIK7CZNP6Avy2etsq9MIgV7zqdO0vdGbwKiiGADOqjMJvxSppYRD1aSlYj_a8Qklp52W2_Bbjq47y6NjKtEcv2wONr_VI3DK2MY2Tjh79jjaTBKO3gRRzJL2hgd0YvI"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uj5uh9rW-M-hi4go8ZG82X1OT7F-usevekUnsfubcTfSIHXeDEr_hqob03lDE2scUP9PrkUGhWsgGOGr45DleKNhT9-PDamhS-CM7MtH_IE9tmWxRMARYEG1kqMQnuNSCH8CfiAqL9n7bIlEge5v68C_9dEF2ZBysw5hxovLTg6tCvLMx9EW1AROMT1xEBnz55F0WeY9K5Ylj1_-wilp4nFLyGON9MyBema0O67ffVMmBnhymueoJmX0-gUicQDrb9C9igNW-9I-Wc"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uhcXzqXQBuDGl8_Zilxsv1bjpVOWRSCg8r13TFzGbO8FIfD71we0hkvO2ftphCfLc8mQ-SKSt5gdkyyDmdJKI3QcanRS7JnkvPOTXtxj4RIj3pSaQvZ2GIOuZBGZUJsfp7afqWFNSumvPIZC1FVLMUuXwLOIL205q8BbcAMAWcNF2rKRQ44CUoXd1BEt42wdORx3vA_sBoooCoDbPTDXQPodsGUvGb6txY3gd4U7YdQKPkg1Ol_k92620-aHiG7P32dfWTHf80u6ns"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ugwKMeehb_aChdYal9eC_yDYTPeHj4Gyc5h2fHwCPTusa_dX5ao1uLaOK9ZNvuJMhosSQkUBF70CiOZmxPfPF0rx8AyifZfzyVpj3Gh5OwUCkKOAm-OHoydJVPNbb4KxAMLTq8v3ZnSgmo1Qa_447IHNlVD1aXLQBYBKMHERRenLa7sPXEvzSQvOqb9vfVMUcflMoRk8BblEdAVhF1w5FyALQ7tQcEDq2DmKHgBDjHsN1m2dmJJyDwtfyXmnxWwfGy_5Ju1hGoPAKc"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uihNY8yObXQy-KNMEJbUdGxCCRDJ81htOCkTSoOcqLVOJhTjLhGwAz7hB2mGXI4P8DFZBF0w4ukcHsEaCf1B8KxOMcFNVy0SFWe3oxOAh0KJqyZQ1OCGxpF3flRwLdRZ8KERaadj_P4Ok2BXrGP8nb9gVN1_qc0ZKOj4V-cvFu9N3sqMbAPLnNgws67LkG6Ms2KshNFQQRmHRU-wOfE3qVc9ydae9eHL6cv-eZ3yPLOExFKH1KqLE9-le9IHA5GPGfmgSM6UGGmtkA"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0ujpzKswKvkbRI_p7Tr0lNi6Q58Yy7M4s1DqtL7GnPq_FYcHYbfgcWwQ13jdCHzQEnKrgsaNLefronzVgbV5k7FABuyn7ftBJdxgJNGPttJlM0OSoJ0k_0f7QfXBBdIWrlJUxAtmGYZUfRlRaVAnH-os0k6iXQ8TtNUNK-p0PHdfsy2t1PjS9Q_luDQOCRpKDbh23uAf6tY9hibyI9d3INqhNxNeL2Z0Ih1Q3PNv1Ghf-axWuMOX-hqoHd9MtvEwzn6nNYW8-_noWQA"/></div><div class="overflow-hidden rounded-xl bg-surface-variant hover:scale-[1.02] transition-transform duration-500 cursor-pointer group"><img alt="Class activity" class="w-full h-auto object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida/ADBb0uh2OeRhTtfoLF9uyYZWk7xVO8VJ2X6ReEK0-OcPEqx4Pg9Hjp1JUmU-y3MbfucI6FmUhf5Lm-CQUXG4ZsgKEkuykgcyALoXaV3aNagkLhVsWyV8SDDTmZQssQUXLJosC59_le3nzaINteQtVomR3ujnGQki9_AO3XQ7GcsxAq1Uin6ek0_cbqWfWnnDbDy7uCOAso5c-f4zrnXE9W99oMvtDDaB40NF99OkJMyVtLBafz8GcJUAl65hZ7PA78fWUgJYptxwEa2SfGA"/></div></div>
+</section>
+<!-- Photographer Spotlight / Credits Section -->
+</main>
+<!-- Footer -->
+<!-- Photographer Spotlight Section -->
+<section class="max-w-container-max mx-auto px-margin py-stack-lg border-t border-outline-variant/30">
+<div class="max-w-3xl">
+<h2 class="font-h2 text-h3 md:text-h2 text-primary mb-stack-sm">Captured by Isha Thorat</h2>
+<p class="font-accent-italic text-accent-italic text-on-surface-variant italic">
+            Photography &amp; Film by Isha Thorat. Isha's role in Stoka goes beyond just documentation; she is a witness to the subtle rhythms of growth. For the past year, she has spent every week with us, becoming a part of the class fabric to capture these candid, joyful moments of physical expression without ever disrupting the flow. Her lens celebrates the 'perfectly imperfect' essence of our movement.
+        </p>
+</div>
+</section><footer class="bg-surface-container dark:bg-surface-container-highest mt-stack-lg rounded-t-xl">
+<div class="max-w-container-max mx-auto px-margin py-stack-md">
+
+<div class="flex flex-col md:flex-row justify-between items-center md:items-center gap-8">
+
+    <!-- LEFT SIDE -->
+    <div class="flex items-center gap-6">
+
+        <img 
+            alt="Stoka Logo" 
+            class="h-32 w-32 object-contain"
+            src="Photos/start.png"
+            onerror="this.onerror=null;this.src='start.png';"
+        />
+
+        <div class="flex flex-col gap-2">
+
+            <p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                Photography &amp; Film by Isha Thorat. © Stoka
+            </p>
+
+            <p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                Domain created and available: stokathemovement.org
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="flex gap-8">
+
+        <a 
+            class="font-label text-label text-on-surface-variant hover:text-secondary transition-colors underline" 
+            href="mailto:admin@stokathemovement.org"
+        >
+            admin@stokathemovement.org
+        </a>
+
+        <a 
+            class="font-label text-label text-on-surface-variant hover:text-secondary transition-colors underline" 
+            href="https://www.instagram.com/stokathemovement?igsh=MXRlZWt6dG45eG5lbA=="
+        >
+            @stokathemovement
+        </a>
+
+    </div>
+
+</div>
+</div>
+</footer>
+</body></html>

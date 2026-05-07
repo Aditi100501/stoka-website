@@ -1,0 +1,319 @@
+<!-- Why It Matters - Stoka -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .watercolor-blob {
+      background: radial-gradient(circle at center, var(--tw-gradient-from) 0%, transparent 70%);
+      filter: blur(40px);
+      opacity: 0.15;
+    }
+    .organic-clip {
+      clip-path: polygon(2% 0%, 98% 3%, 100% 95%, 5% 100%, 0% 10%);
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-fixed": "#ffddb4",
+            "on-primary-fixed": "#321200",
+            "on-primary-fixed-variant": "#763400",
+            "surface-container-low": "#fff1eb",
+            "surface-container": "#fdeae1",
+            "primary-container": "#e07b39",
+            "secondary-container": "#feae2c",
+            "on-primary-container": "#4f2100",
+            "on-surface": "#231a15",
+            "surface-variant": "#f1dfd6",
+            "outline-variant": "#dcc1b4",
+            "tertiary-fixed-dim": "#ffb694",
+            "primary-fixed-dim": "#ffb68c",
+            "primary": "#9a4601",
+            "tertiary": "#8d4e2e",
+            "on-surface-variant": "#554339",
+            "surface-tint": "#9a4601",
+            "inverse-primary": "#ffb68c",
+            "on-error-container": "#93000a",
+            "on-secondary-container": "#6b4500",
+            "secondary": "#835500",
+            "on-primary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed": "#ffdbcc",
+            "tertiary-container": "#ce835f",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#351000",
+            "error": "#ba1a1a",
+            "on-tertiary-container": "#501f04",
+            "secondary-fixed-dim": "#ffb955",
+            "surface-bright": "#fff8f6",
+            "primary-fixed": "#ffdbc9",
+            "on-secondary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed-variant": "#633f00",
+            "surface": "#fff8f6",
+            "background": "#fff8f6",
+            "on-secondary-fixed": "#291800",
+            "on-background": "#231a15",
+            "surface-container-highest": "#f1dfd6",
+            "inverse-on-surface": "#ffede5",
+            "error-container": "#ffdad6",
+            "outline": "#897367",
+            "on-tertiary-fixed-variant": "#703719",
+            "surface-dim": "#e8d6ce",
+            "surface-container-high": "#f7e4dc",
+            "inverse-surface": "#392e29"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "stack-md": "2rem",
+            "unit": "8px",
+            "gutter": "24px",
+            "margin": "32px",
+            "stack-lg": "4rem",
+            "container-max": "1280px",
+            "stack-sm": "1rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Plus Jakarta Sans"],
+            "accent-italic": ["Newsreader"],
+            "h2": ["Newsreader"],
+            "h3": ["Newsreader"],
+            "h1": ["Newsreader"],
+            "label": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-lg": ["1.25rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "accent-italic": ["1.5rem", {"lineHeight": "1.4", "fontWeight": "400"}],
+            "h2": ["3rem", {"lineHeight": "1.2", "fontWeight": "500"}],
+            "h3": ["2.25rem", {"lineHeight": "1.3", "fontWeight": "500"}],
+            "h1": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "label": ["0.875rem", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+            "body-md": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-background fixed top-0 w-full z-50">
+<div class="flex justify-between items-center w-full px-margin py-stack-sm max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<img 
+    alt="Stoka Logo" 
+    id="site-logo" 
+    class="h-28 w-28 object-contain"
+    src="Photos/start.png"
+    onerror="this.onerror=null;this.src='start.png';"
+/>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label text-label text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="font-label text-label text-on-surface-variant hover:text-primary transition-colors" href="our-story.html">Our Story</a>
+<a class="font-label text-label text-on-surface-variant hover:text-primary transition-colors" href="the-work.html">The Work</a>
+<a class="font-label text-label text-primary border-b-2 border-primary pb-1" href="why-it-matters.html">Why It Matters</a>
+<a class="font-label text-label text-on-surface-variant hover:text-primary transition-colors" href="our-vision.html">Our Vision</a>
+<a class="font-label text-label text-on-surface-variant hover:text-primary transition-colors" href="get-involved.html">Get Involved</a>
+</nav>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="mt-24">
+<!-- Hero / The Problem in India -->
+<section class="relative px-margin py-stack-lg max-w-container-max mx-auto overflow-hidden">
+<div class="watercolor-blob from-primary absolute -top-20 -left-20 w-96 h-96 rounded-full"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7">
+<span class="font-label text-label text-primary uppercase tracking-widest mb-4 block">The Context</span>
+<h1 class="font-h1 text-h1 text-primary leading-none mb-8">
+            50%
+          </h1>
+<p class="font-h2 text-h3 text-on-surface leading-tight mb-8">
+            Of individuals with disabilities in India have never attended an educational institution.
+          </p>
+<div class="space-y-4 border-l-2 border-primary-container pl-6">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="data_exploration">data_exploration</span>
+<p class="font-body-md text-on-surface-variant">Access to specialized developmental support remains a luxury, leaving millions without the tools for self-expression or physical autonomy.</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="trending_up">trending_up</span>
+<p class="font-body-md text-on-surface-variant">The gap in therapeutic services is most acute in marginalized communities where rehabilitation is often an afterthought.</p>
+</div>
+</div>
+<div class="mt-8 flex gap-6">
+<span class="font-label text-[10px] text-outline italic">Source: Census 2011</span>
+<span class="font-label text-[10px] text-outline italic">Source: MOSPI 2021</span>
+</div>
+</div>
+</div>
+</section>
+<!-- The Access Gap in the Arts -->
+<section class="bg-surface-container-low py-stack-lg">
+<div class="px-margin max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div class="order-2 lg:order-1">
+<div class="bg-white p-12 rounded-[2rem] border border-outline-variant relative">
+<span class="material-symbols-outlined absolute -top-6 left-12 text-6xl text-primary-container opacity-30" data-icon="format_quote" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="font-h2 text-h3 text-primary mb-6 italic leading-snug">
+                "How is it fair for these children to have limited access to resources that are widely available to everyone else?"
+              </p>
+<div class="flex items-center gap-3">
+<img alt="Stoka Logo" class="h-12 w-12 object-contain" src="Photos/start.png"/>
+<p class="font-label text-label text-on-surface">SURBHI, FOUNDER</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="font-h2 text-h2 text-tertiary mb-6">The Access Gap in the Arts</h2>
+<div class="space-y-6 font-body-lg text-on-surface-variant">
+<p>
+                In many parts of India, dance and the arts are viewed through a narrow lens of performance or tradition. For children with diverse abilities, the doors to these spaces are often closed—not just by physical barriers, but by a deep-seated social stigma.
+              </p>
+<p>
+                We see a lack of inclusive programs that recognize movement as a fundamental human right. Art shouldn't be a privilege of the neurotypical or the physically able; it should be the common ground where we all meet to discover who we are.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- What Dance Therapy Actually Does -->
+<section class="px-margin py-stack-lg max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-h2 text-h2 text-primary mb-4">The Four Domains of Impact</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Research-backed benefits of movement-based therapy that go far beyond the studio floor.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Physical -->
+<div class="bg-surface p-8 rounded-xl border border-surface-variant hover:border-primary transition-colors group">
+<div class="w-14 h-14 bg-surface-container-high rounded-full flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="accessibility_new">accessibility_new</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-3">Physical</h3>
+<p class="font-body-md text-on-surface-variant">Improving motor coordination, balance, and body awareness through rhythmic sequences and spatial exploration.</p>
+</div>
+<!-- Cognitive -->
+<div class="bg-surface p-8 rounded-xl border border-surface-variant hover:border-primary transition-colors group">
+<div class="w-14 h-14 bg-surface-container-high rounded-full flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="psychology">psychology</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-3">Cognitive</h3>
+<p class="font-body-md text-on-surface-variant">Enhancing memory, focus, and executive function by learning patterns and making creative choices in real-time.</p>
+</div>
+<!-- Social/Emotional -->
+<div class="bg-surface p-8 rounded-xl border border-surface-variant hover:border-primary transition-colors group">
+<div class="w-14 h-14 bg-surface-container-high rounded-full flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="groups">groups</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-3">Social</h3>
+<p class="font-body-md text-on-surface-variant">Building empathy, collaborative skills, and a sense of belonging through shared movement and group resonance.</p>
+</div>
+<!-- Expression/Communication -->
+<div class="bg-surface p-8 rounded-xl border border-surface-variant hover:border-primary transition-colors group">
+<div class="w-14 h-14 bg-surface-container-high rounded-full flex items-center justify-center mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white" data-icon="forum">forum</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-3">Expression</h3>
+<p class="font-body-md text-on-surface-variant">Developing non-verbal ways to communicate emotions, allowing the body to speak where words may fall short.</p>
+</div>
+</div>
+</section>
+<!-- Stigma Section -->
+<section class="relative px-margin py-stack-lg max-w-container-max mx-auto mb-stack-lg">
+<div class="watercolor-blob from-secondary absolute -bottom-20 -right-20 w-[500px] h-[500px] rounded-full"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 mb-8 lg:mb-0">
+<img class="w-full h-[500px] object-cover rounded-[3rem] organic-clip" data-alt="A close-up, high-detail photograph of hands working with soft orange clay, symbolizing the 'perfectly imperfect' and handmade nature of growth. The lighting is warm and golden, casting soft shadows that highlight the texture of the material. The overall aesthetic is tactile and organic, reflecting the brand's core values of human-centered care and physical expression." src="https://lh3.googleusercontent.com/aida/ADBb0ugX0cCC8uDAnkQRqlclVugBmc79PrRUIQgRyoTviSL-GYikv506dfhnrDCAcimLsa14YrR_h9jhgVNb4ojdVdNU8izHwrciJ4kwrr2IBXL-vD4MZdHrR3l3Q8txqzm2mi52uCW1Fib9uKJLKqleQPhenK0UwlBcBI6afx69BWedaBK6LhcE57PqW21szuB19nJh4VqvX9PiU5hv2Mt9Sc9WdsIq-bpudny-UPd24TwXpcuFqPF5H4mnI3UwpQkob3AcCacpV0s17g"/>
+</div>
+<div class="lg:col-span-7 lg:pl-12">
+<h2 class="font-h2 text-h2 text-secondary mb-8">The Hidden Barrier</h2>
+<div class="space-y-6 font-body-lg text-on-surface-variant">
+<p>
+              Stigma is often a quiet, pervasive doubt. It’s the look of pity from a passerby or the low expectations set by society. For Stoka’s founder, this wasn’t just a theoretical problem—it was an lived observation.
+            </p>
+<p class="bg-secondary-fixed p-8 rounded-xl text-on-secondary-fixed-variant italic">
+              "I saw that the biggest obstacle wasn't the physical or cognitive diagnosis. It was the collective assumption that these individuals couldn't dance, couldn't create, or didn't need to express themselves artistically. Breaking that stigma is our first step in every session."
+            </p>
+<p>
+              By creating a space where the "perfection" of a movement is measured by its authenticity rather than its form, we are dismantling the barriers of doubt one heartbeat at a time.
+            </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-highest mt-stack-lg rounded-t-xl">
+<div class="max-w-container-max mx-auto px-margin py-stack-md">
+
+<div class="flex flex-col md:flex-row justify-between items-center md:items-center gap-8">
+
+    <!-- LEFT SIDE -->
+    <div class="flex items-center gap-6">
+
+        <img 
+            alt="Stoka Logo" 
+            class="h-32 w-32 object-contain"
+            src="Photos/start.png"
+            onerror="this.onerror=null;this.src='start.png';"
+        />
+
+        <div class="flex flex-col gap-2">
+
+            <p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                Photography &amp; Film by Isha Thorat. © Stoka
+            </p>
+
+            <p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                Domain created and available: stokathemovement.org
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="flex gap-8">
+
+        <a 
+            class="font-label text-label text-on-surface-variant hover:text-secondary transition-colors underline" 
+            href="mailto:admin@stokathemovement.org"
+        >
+            admin@stokathemovement.org
+        </a>
+
+        <a 
+            class="font-label text-label text-on-surface-variant hover:text-secondary transition-colors underline" 
+            href="https://www.instagram.com/stokathemovement?igsh=MXRlZWt6dG45eG5lbA=="
+        >
+            @stokathemovement
+        </a>
+
+    </div>
+
+</div>
+</div>
+</footer>
+</body></html>
